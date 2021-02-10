@@ -41,6 +41,7 @@ router.post(
       },
       "asdf"
     );
+    console.log("hi");
     req.session = { jwt: userJwt };
     res.status(201).send(user);
   }
