@@ -23,7 +23,7 @@ router.post(
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
-      return res.send({});
+      return res.status(400).send({});
     }
 
     const user = User.build({ email, password });
